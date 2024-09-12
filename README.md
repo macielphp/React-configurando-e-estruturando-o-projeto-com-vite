@@ -30,7 +30,7 @@ export default function Sidebar() {
 4. Store the images and icons in react/src/components/Sidebar/assets;
 5. Import the Logo and create the img tag within the aside one:
 ```
-import Logo from './assets/profile.svg';
+import Logo from './Sidebar/ assets/profile.svg';
 
 export default function Sidebar() {
     return(
@@ -56,11 +56,11 @@ export default function Sidebar() {
 
 7. Create another 'li' tag; and continue doing the rest of the html structure accordingly to the prototype in Figma.
 ```
-import Logo from './assets/logo';
-import Feed from './assets/feed.svg';
-import Profile from './assets/account_circle.svg';
-import AboutUs from './assets/info.svg';
-import Exit from './assets/logout.svg';
+import Logo from './Sidebar/assets/logo.svg';
+import Feed from './Sidebar/assets/feed.svg';
+import Profile from './Sidebar/assets/account_circle.svg';
+import AboutUs from './Sidebar/assets/info.svg';
+import Exit from './Sidebar/assets/logout.svg';
 
 
 export default function Sidebar() {
@@ -74,19 +74,19 @@ export default function Sidebar() {
                     </li>
                     <li>
                         <a href="#">
-                            <img src={Feed} alt="icon" />
+                            <img src={Feed} alt="icon"/>
                             <span>Feed</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src={Profile} alt="icon" />
+                            <img src={Profile} alt="icon"/>
                             <span>Perfil</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src={AboutUs} alt="icon" />
+                            <img src={AboutUs} alt="icon"/>
                             <span>About us</span>
                         </a>
                     </li>
@@ -100,5 +100,67 @@ export default function Sidebar() {
             </nav>
         </aside>
     )
+}
+```
+
+git commit -m "Coded the HTML for the sidebar link"
+
+## Styles for the sidebar
+1. Remove everything wrapped around the return's parentesses and all imports except the './App.css', in codeconnect/react/src/App.jsx:
+```
+import './App.css'
+
+function App() {
+  return (
+
+  )
+}
+
+export default App
+```
+2. Import the Sidebar  from './components' and insert the Sidebar inside the return's parentesses:
+```
+import './App.css'
+import Sidebar from './components'
+
+function App() {
+
+  return (
+    <Sidebar />
+  )
+}
+export default App
+
+```
+Run in the terminal: ```npm run dev``` to see the result. 
+
+3. Remove all code in :
+- codeconnect/react/src/App.css;
+- codeconnect/react/src/index.css;
+4. Create variables in codeconnect/react/src/index.css by looking at the prototype.
+- Import Google fonts;
+```
+:root {
+  --highlight-green: #81FE88;
+  --pastel-green: #BFFFC3;
+  --petroleum-green: #132E35;
+  --graphite: #01080E;
+  --dark-gray: #171D1F;
+  --gray: #3E3E3F;
+  --medium-gray: #888888;
+  --light-gray: #BCBCBC;
+  --offwhite: #E1E1E1;
+  --white: #FFFFFF;
+  --font: "Prompt", sans-serif;
+}
+```
+
+5. Reset the css styles.
+- Check this reset and use or just make a simple reset: <a href="https://piccalil.li/blog/a-more-modern-css-reset/#:~:text=Resets%20are%20one%20of%20those%20things%20that%20people">A (more) Modern CSS Reset</a>
+```
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 ```
