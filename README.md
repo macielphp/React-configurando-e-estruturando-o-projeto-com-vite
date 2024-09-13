@@ -173,7 +173,7 @@ git commit -m "Adiction of variables and reset"
 3. Start styling the Sidebar in the codeconnect/react/src/components/Sidebar/style.css.
 
 4. http://localhost:5173/:
-![alt text](image.png)
+![alt text](/react/assets/image.png)
 
 git commit -m "Completed styles of the Sidebar component"
 
@@ -182,7 +182,7 @@ git commit -m "Completed styles of the Sidebar component"
 
 2. Create a new file called 'index.jsx' in codeconnect/react/src/components/SearchBar/;
 
-    ![alt text](image-2.png)
+    ![alt text](/react/assets/image-2.png)
 
 3. Create and export the SearchBar function component in codeconnect/react/src/components/SerachBar/index.jsx:
     ```
@@ -196,7 +196,7 @@ git commit -m "Completed styles of the Sidebar component"
 
 5. Create a new folder called 'assets' in codeconnect/react/src/SearchBar/ and store the imagens and icons;
 
-    ![alt text](image-4.png)
+    ![alt text](/react/assets/image-4.png)
 
 6. Code the html structure in codeconnect/react/src/SearchBar/index.jsx;
     ```
@@ -210,7 +210,7 @@ git commit -m "Completed styles of the Sidebar component"
     ```
 
 7. Create a new file called 'style.css' in codeconnect/react/src/components/SearchBar/;
-    ![alt text](image-3.png)
+    ![alt text](/react/assets/image-3.png)
 
 8. Import the style.css file in codeconnect/react/src/components/SearchBar/index.jsx;
     ```
@@ -246,4 +246,49 @@ git commit -m "Completed styles of the Sidebar component"
         )
     }
     ```
+
+git commit -m "Completed html, css, folders,  and import/export of the SearchBar component"
+
+## useState
+1. Inside the codeconnect/react/src/components/SearchBar/index.jsx import the useState and use:
+    ```
+    import { useState } from 'react';
+    import './style.css';
+    export default function SearchBar(){
+        const [termSearched, setTermSearched] = useState('');
+        console.log(termSearched);
+        return(
+            <input 
+            type="search" 
+            placeholder="Type what you wish" 
+            className="search-bar"
+            value={termSearched}
+            onChange={(event) => setTermSearched(event.target.value)}/>
+        )
+    }
+    ```
+    Learn more at: https://react.dev/reference/react/useState
+2. Check the result in codeconnect/react/ and in the terminal run: npm run dev:
+    ![alt text](/react/assets/image-5.png)
+    - As an input is inserted in the search bar, the useState receives each interaction.
+3. Add a className to the parent div in the codeconnect/react/src/App.jsx and style it in the codeconnect/react/src/App.css in order to display the components in the proper place according to the prototype:
+    ```
+    <!-- codeconnect/react/src/App.jsx -->
+    return (
+        <div className='container'>
+            <Sidebar />
+            <SearchBar />
+        </div>
+    )
+    ```
+    ```
+    <!-- codeconnect/react/src/App.css -->
+    .container{
+        width: 62vw;
+        margin: 3.5em auto;
+        display: flex;
+        gap: 16px;
+    }
+    ```
+    ![alt text](/react/assets/image-6.png)
 
