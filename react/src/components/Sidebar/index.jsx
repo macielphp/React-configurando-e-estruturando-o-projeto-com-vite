@@ -1,9 +1,9 @@
-import Logo from './Sidebar/assets/logo.svg';
-import Feed from './Sidebar/assets/feed.svg';
-import Profile from './Sidebar/assets/account_circle.svg';
-import AboutUs from './Sidebar/assets/info.svg';
-import Exit from './Sidebar/assets/logout.svg';
-import './Sidebar/style.css';
+import Logo from './assets/logo.svg';
+import Feed from './assets/feed.svg';
+import Profile from './assets/account_circle.svg';
+import AboutUs from './assets/info.svg';
+import Exit from './assets/logout.svg';
+import './style.css';
 
 export default function Sidebar() {
     return(
