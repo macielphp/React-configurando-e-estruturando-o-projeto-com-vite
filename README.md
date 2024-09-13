@@ -105,7 +105,7 @@ export default function Sidebar() {
 
 git commit -m "Coded the HTML for the sidebar link"
 
-## Styles for the sidebar
+## Variables for styles
 1. Remove everything wrapped around the return's parentesses and all imports except the './App.css', in codeconnect/react/src/App.jsx:
 ```
 import './App.css'
@@ -164,3 +164,12 @@ Run in the terminal: ```npm run dev``` to see the result.
   box-sizing: border-box;
 }
 ```
+git commit -m "Adiction of variables and reset"
+
+## Styling the page
+1. Create a style.css file in codeconnect/react/src/components/Sidebar/.
+2. Import the style.css in the index.jsx which is in codeconnect/react/src/.
+```
+import './Sidebar/style.css';
+```
+3. Start styling the Sidebar in the codeconnect/react/src/components/Sidebar/style.css.
