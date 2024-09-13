@@ -2,12 +2,13 @@
  Project derived from the course "React: configurando e estruturando o projeto com Vite" from Alura
 
 ## First commands
-1. Run: npm npm create vite@latest -- --template react
+1. npm create vite@latest -- --template react
 2. cd react
 3. npm install
     - Chose: React and JavaScript.
 4. npm run dev
-Learn more at: https://vitejs.dev/guide/
+
+    Learn more at: https://vitejs.dev/guide/
 
 ## Folders
 1. Create the folder 'components' inside react's folder;
@@ -188,17 +189,35 @@ git commit -m "Completed styles of the Sidebar component"
     ```
     export default function SearchBar(){
         return(
-            
+            <!-- Code the HTML structure -->
         )
     }
     ```
-4. Download the medias from the prototype;
+4. Import the SearchBar function component in codeconnect/react/src/App.jsx so you can check the changes on real time in your browser:
+    ```
+    import { useState } from 'react';
+    import './style.css';
 
-5. Create a new folder called 'assets' in codeconnect/react/src/SearchBar/ and store the imagens and icons;
+    export default function SearchBar(){
+        const [termSearched, setTermSearched] = useState('');
+        console.log(termSearched);
+        return(
+            <input 
+            type="search" 
+            placeholder="Type what you wish" 
+            className="search-bar"
+            value={termSearched}
+            onChange={(event) => setTermSearched(event.target.value)}/>
+        )
+    }
+    ```
+5. Download the medias from the prototype;
+
+6. Create a new folder called 'assets' in codeconnect/react/src/SearchBar/ and store the imagens and icons;
 
     ![alt text](/react/assets/image-4.png)
 
-6. Code the html structure in codeconnect/react/src/SearchBar/index.jsx;
+7. Code the html structure in codeconnect/react/src/SearchBar/index.jsx SearchBar function component;
     ```
     import './style.css';
 
@@ -209,14 +228,14 @@ git commit -m "Completed styles of the Sidebar component"
     }
     ```
 
-7. Create a new file called 'style.css' in codeconnect/react/src/components/SearchBar/;
+8. Create a new file called 'style.css' in codeconnect/react/src/components/SearchBar/;
     ![alt text](/react/assets/image-3.png)
 
-8. Import the style.css file in codeconnect/react/src/components/SearchBar/index.jsx;
+9. Import the style.css file in codeconnect/react/src/components/SearchBar/index.jsx;
     ```
     import './style.css';
     ```
-9. Style the search bar in the codeconnect/react/src/components/SearchBar/style.css:
+10. Style the search-bar in the codeconnect/react/src/components/SearchBar/style.css:
     ```
     .search-bar{
         width: 100%;
@@ -231,26 +250,10 @@ git commit -m "Completed styles of the Sidebar component"
     }
     ```
 
-10. In the codeconnect/react/src/App.jsx, import the SearchBar component:
-    ```
-    import SearchBar from './components/SearchBar'
-    ```
-11. Wrap the Components in an parent tag in the file codeconnect/react/src/App.jsx
-    ```
-    function App() {
-        return (
-            <div>
-                <Sidebar />
-                <SearchBar />
-            </div>
-        )
-    }
-    ```
-
 git commit -m "Completed html, css, folders,  and import/export of the SearchBar component"
 
 ## useState
-1. Inside the codeconnect/react/src/components/SearchBar/index.jsx import the useState and use:
+1. Inside the codeconnect/react/src/components/SearchBar/index.jsx import the useState, create a state variable and insert the properties value and onChange:
     ```
     import { useState } from 'react';
     import './style.css';
@@ -292,3 +295,53 @@ git commit -m "Completed html, css, folders,  and import/export of the SearchBar
     ```
     ![alt text](/react/assets/image-6.png)
 
+git commit -m "Completed usage of the useState and style of the main container"
+
+## Filters
+1. Create a new folder called 'Filter' in codeconnect/react/src/components/:
+    ![alt text](/react/assets/image-7.png);
+
+2. Create a new file called index.jsx in codeconnect/react/src/components/Filter;
+
+3. Create and export the Filter function component in codeconnect/react/src/components/Filter/index.jsx:
+    ```
+    export default function Filter(){
+    return(
+        <!-- Code the HTML structure -->
+        )
+    }
+    ```
+4. Import the Filter function component in codeconnect/react/src/App.jsx so you can check the changes on real time in your browser:
+    ``` 
+    import './App.css'
+    import Sidebar from './components/Sidebar'
+    import SearchBar from './components/SearchBar'
+    import Filter from './components/Filter'
+
+    function App() {
+        return (
+            <div className='container'>
+                <Sidebar />
+                <SearchBar />
+                <Filter />
+            </div>
+        )
+    }
+    export default App
+    ```
+5. Download the medias from the prototype IF NECESSARY(same process being repeated);
+
+6. Create a new folder called 'assets' in codeconnect/react/src/Filter/ and store the imagens and icons IF NECESSARY(same process being repeated);
+
+7. Code the HTML structure in codeconnect/react/src/components/Filter/index.jsx IF NECESSARY.
+
+8. Create a new file called 'style.css' in codeconnect/react/src/components/Filter/ IF NECESSARY(same process being repeated);
+
+9. Import the style.css file in codeconnect/react/src/components/Filter/index.jsx;
+    ```
+    import './style.css';
+    ```
+
+10. Style in the following files (same process being repeated):
+    - codeconnect/react/src/App.css
+    - codeconnect/react/src/components/Filter/style.css

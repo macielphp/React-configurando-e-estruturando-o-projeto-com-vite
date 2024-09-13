@@ -1,0 +1,24 @@
+.container-filter ul li{
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    font-size: 18px;
+    padding: 0.25em 0.5em;
+    border-radius: 4px;
+}
+.container-filter{
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+}
+
+.container-filter ul{
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+}
+.container-filter button{
+    border: none;
+    background-color: transparent;
+    color: var(--medium-gray);
+    font-size: 18px;
+}
