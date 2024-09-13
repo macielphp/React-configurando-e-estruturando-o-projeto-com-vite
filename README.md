@@ -345,3 +345,59 @@ git commit -m "Completed usage of the useState and style of the main container"
 10. Style in the following files (same process being repeated):
     - codeconnect/react/src/App.css
     - codeconnect/react/src/components/Filter/style.css
+    
+git commit -m "Completed the Filter component, html and css"
+
+## Cards
+
+1. Create a new folder called 'Card' in codeconnect/react/src/components/:
+
+2. Create a new file called index.jsx in codeconnect/react/src/components/Card;
+
+3. Create and export the Card function component in codeconnect/react/src/components/Card/index.jsx:
+    ```
+    export default function Card(){
+    return(
+        <!-- Code the HTML structure -->
+        )
+    }
+    ```
+4. Import the Card function component in codeconnect/react/src/App.jsx so you can check the changes on real time in your browser:
+    ``` 
+    import './App.css'
+    import Sidebar from './components/Sidebar'
+    import SearchBar from './components/SearchBar'
+    import Filter from './components/Filter'
+    import Card from './components/Card'
+
+    function App() {
+        return (
+            <div className='container'>
+                <Sidebar />
+                <SearchBar />
+                <Filter />
+            </div>
+        )
+    }
+    export default App
+    ```
+5. Download the medias from the prototype IF NECESSARY(same process being repeated);
+
+6. Create a new folder called 'assets' in codeconnect/react/src/Cards/ and store the imagens and icons IF NECESSARY(same process being repeated);
+
+7. Code the HTML structure in codeconnect/react/src/components/Card/index.jsx IF NECESSARY.
+
+8. Create a new file called 'style.css' in codeconnect/react/src/components/Filter/ IF NECESSARY(same process being repeated);
+
+9. Import the style.css file in codeconnect/react/src/components/Card/index.jsx;
+    ```
+    import './style.css';
+    ```
+
+10. Style in the following files (same process being repeated):
+    - codeconnect/react/src/App.css
+    - codeconnect/react/src/components/Card/style.css
+
+11. npm run dev:
+    ![alt text](/react/assets/image-8.png)
+
