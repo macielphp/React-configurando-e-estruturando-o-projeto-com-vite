@@ -404,4 +404,127 @@ git commit -m "Completed the Filter component, html and css"
 git commit -m "Complete Card component, html and css"
 
 ## useEffect
-1. Create a 
+
+1. Import the useState and the useEffect in the codeconnect/react/src/App.jsx:
+    ```
+    import { useState, useEffect } from 'react';
+    ```
+
+2. Create the state variable in the codeconnect/react/src/App.jsx: 
+    ```
+    const [data, setData] = useState([]);
+    ```
+3. Create an unordered list and add a className to it in codeconnect/react/src/App.jsx:
+    ```
+    <ul className="cards-list">
+
+    </ul>
+    ```
+4. Create a string interpolation to check if there's anything different than a null or undefined value:
+    ```
+    <ul className="cards-list">
+        { data ? data.map( code here ) : null}
+    </ul>
+    ```
+    Example:
+    ```
+    { isLoggedIn ? <p>Welcome back!</p> : <p>Please log in.</p> }
+    ```
+    Learn more: https://www.dhiwise.com/post/react-string-interpolation-combine-static-and-dynamic-values
+5. Use map() to iterate over the array data and execute a callback function for each array's element(item):
+    ```
+    <ul className="cards-list">
+        { data ? data.map((item, index) => (
+            <li>
+
+            </li>
+        )) : null}
+    </ul>
+    ```
+    Learn more: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map;
+
+6. Call the Cart component and create properties to store and acess the items' values:
+    ```
+    <ul className='cards-list'>
+          { data ? data.map((item, index) => (
+            <li key={index}>
+              <Card 
+                id={item.id}
+                imagemUrl={item.imagem_capa}
+                titulo={item.titulo}
+                resumo={item.resumo}
+                linhas_de_codigo={item.linhas_de_codigo}
+                compartilhamentos={item.compartilhamentos}
+                comentarios={item.comentarios}
+                usuario={item.usuario}
+              />
+            </li>
+          )) : null}
+        </ul>
+    ```
+### data
+    Definition: data is the array of items to be iterated over.
+
+    Usage: In your example, data is the variable that contains a list of objects, where each object represents an item you want to display using the <Card /> component.
+### item
+    Definition: item is a parameter of the callback function provided to map. It represents a single element of the data array during each iteration.
+
+    Usage: For each item in the data array, the item variable contains the data for that specific item. In the example, item is an object with properties like id, imagem_capa, titulo, etc. These data are passed as props to the <Card /> component.
+
+### index
+    Definition: index is another parameter of the callback function provided to map. It represents the index of the current element within the data array (i.e., its position in the list).
+
+    Usage: The index is mainly used to provide a unique key for each rendered list element. This helps React identify which items have changed, been added, or removed, and optimize the rendering process. It's important that each item in a rendered list has a unique key, and index is often used for this purpose, although ideally, you should use a more stable unique identifier when available.
+
+### key
+    Definition: key is a special prop that you should add to each element in a list rendered by React.
+
+    Usage: The key helps React identify which items have changed, been added, or removed from the list. This improves the efficiency of the rendering process and updates only the necessary items. In your code, key={index} is used to assign a unique key to each <li> element. In a real application, it is preferable to use a unique identifier (such as an ID) to ensure that the key does not change if the array is reordered.
+
+7. Insert the name of the properties(props) in the Card component in codeconnect/react/src/components/Card/index.jsx:
+    ```
+    export default function Card({ id, imagemUrl, titulo, resumo, linhas_de_codigo, compartilhamentos, comentarios, usuario })
+    ```
+8. Replace the property's value with the props: 
+    ```
+    export default function Card({ id, imagemUrl, titulo, resumo, linhas_de_codigo, compartilhamentos, comentarios, usuario }){
+    return(
+        <article className="card">
+            <div className="card__image">
+                <img src={imagemUrl} alt="post's image"></img>
+            </div>
+            <div className='card__content'>
+                <div className='content__text'>
+                    <h3>{titulo}</h3>
+                    <p>{resumo}</p>
+                </div>
+                <div className='footer'>
+                    <ul>
+                        <li>
+                            <img src={Code} alt="codes" />
+                            <div id="codes-lines">{linhas_de_codigo}</div>
+                        </li>
+                        <li>
+                            <img src={Share} alt="Share" />
+                            <div>
+                                {compartilhamentos}
+                            </div>
+                        </li>
+                        <li>
+                            <img src={Chat} alt="comments" />
+                            <div>{comentarios}</div>
+                            
+                        </li>
+                    </ul>
+                    <div className='footer__user'>
+                        <img src={usuario.imagem} alt="user image" />
+                        <div>{usuario.nome}</div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    )
+    }
+    ```
+    ![alt text](/react/assets/image-9.png)
+    
