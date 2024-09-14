@@ -401,3 +401,7 @@ git commit -m "Completed the Filter component, html and css"
 11. npm run dev:
     ![alt text](/react/assets/image-8.png)
 
+git commit -m "Complete Card component, html and css"
+
+## useEffect
+1. Create a 
