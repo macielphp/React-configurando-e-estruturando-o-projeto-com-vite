@@ -1,8 +1,12 @@
 aside {
     background-color: var(--dark-gray);
     padding: 2.5em 1em;
-    width: 177px;
+    width: 200px;
+    max-width: 200px;
+    min-width: 200px;
+    height: 900px;
     border-radius: 8px;
+    justify-self: start;
 }
 
 .sidebar-list{

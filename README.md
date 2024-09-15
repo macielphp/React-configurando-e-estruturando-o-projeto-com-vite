@@ -488,43 +488,48 @@ git commit -m "Complete Card component, html and css"
 8. Replace the property's value with the props: 
     ```
     export default function Card({ id, imagemUrl, titulo, resumo, linhas_de_codigo, compartilhamentos, comentarios, usuario }){
-    return(
-        <article className="card">
-            <div className="card__image">
-                <img src={imagemUrl} alt="post's image"></img>
-            </div>
-            <div className='card__content'>
-                <div className='content__text'>
-                    <h3>{titulo}</h3>
-                    <p>{resumo}</p>
+        return(
+            <article className="card">
+                <div className="card__image">
+                    <img src={imagemUrl} alt="post's image"></img>
                 </div>
-                <div className='footer'>
-                    <ul>
-                        <li>
-                            <img src={Code} alt="codes" />
-                            <div id="codes-lines">{linhas_de_codigo}</div>
-                        </li>
-                        <li>
-                            <img src={Share} alt="Share" />
-                            <div>
-                                {compartilhamentos}
-                            </div>
-                        </li>
-                        <li>
-                            <img src={Chat} alt="comments" />
-                            <div>{comentarios}</div>
-                            
-                        </li>
-                    </ul>
-                    <div className='footer__user'>
-                        <img src={usuario.imagem} alt="user image" />
-                        <div>{usuario.nome}</div>
+                <div className='card__content'>
+                    <div className='content__text'>
+                        <h3>{titulo}</h3>
+                        <p>{resumo}</p>
+                    </div>
+                    <div className='footer'>
+                        <ul>
+                            <li>
+                                <img src={Code} alt="codes" />
+                                <div id="codes-lines">{linhas_de_codigo}</div>
+                            </li>
+                            <li>
+                                <img src={Share} alt="Share" />
+                                <div>
+                                    {compartilhamentos}
+                                </div>
+                            </li>
+                            <li>
+                                <img src={Chat} alt="comments" />
+                                <div>{comentarios}</div>
+                                
+                            </li>
+                        </ul>
+                        <div className='footer__user'>
+                            <img src={usuario.imagem} alt="user image" />
+                            <div>{usuario.nome}</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </article>
-    )
+            </article>
+        )
     }
     ```
     ![alt text](/react/assets/image-9.png)
     
+git commit -m "Cards being dinamically rendered"
+
+## Screenshots:
+![alt text](/react/assets/image-11.png)
+![alt text](/react/assets/image-10.png)

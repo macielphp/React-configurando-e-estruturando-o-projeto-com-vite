@@ -15,7 +15,7 @@ function App() {
   return (
     <div className='container'>
       <Sidebar/>
-      <div>
+      <div className='sub-container'>
         <SearchBar/> 
         <Filter/>
         <ul className='cards-list'>

@@ -1,10 +1,25 @@
 .container{
-    width: 62vw;
+    width: 90vw;
+    height: 100vh;
     margin: 3.5em auto;
     display: flex;
     gap: 16px;
 }
-.container div{
-    flex-grow: 2;
+.sub-container{
+    flex-direction: column;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: auto;
+ 
+    gap: 10px;
+
+
+    align-self: flex-start;
     
+}
+.cards-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    grid-row: 3/4;
 }

@@ -9,6 +9,8 @@
     display: flex;
     justify-content: space-between;
     margin: 1em;
+    grid-row: 2/3;
+    height: 40px;
 }
 
 .container-filter ul{
