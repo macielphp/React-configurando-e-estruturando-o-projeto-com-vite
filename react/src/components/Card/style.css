@@ -1,5 +1,4 @@
 .card{
-    max-width: 486px;
     border-radius: 8px;
     background-color: var(--dark-gray);
     color: var(--light-gray);
@@ -84,4 +83,12 @@
     border-radius: 50%;
     object-fit: cover;
     margin-right: 5px;
+}
+
+@media only screen and (max-width: 430px){
+    .card{
+        width: 410px;
+        min-width: width;
+        max-width: width;
+    }
 }

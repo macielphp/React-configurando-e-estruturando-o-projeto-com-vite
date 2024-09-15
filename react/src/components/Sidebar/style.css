@@ -2,8 +2,6 @@ aside {
     background-color: var(--dark-gray);
     padding: 2.5em 1em;
     width: 200px;
-    max-width: 200px;
-    min-width: 200px;
     height: 900px;
     border-radius: 8px;
     justify-self: start;
@@ -37,4 +35,46 @@ aside {
     padding: 0.75em 1em;
     border-radius: 8px;
     text-decoration: none;
+}
+@media only screen and (max-width: 768px) {
+    .sidebar-list {
+        margin-top: 0px !important;
+    }
+    .sidebar-list li:nth-of-type(1){
+        align-self: end;
+    }
+    .sidebar-list li:nth-of-type(2){
+        display: none;
+    }
+    .sidebar-list li:nth-of-type(3){
+        display: none;
+    }
+    .sidebar-list li:nth-of-type(4){
+        display: none;
+    }
+    .sidebar-list li:nth-of-type(5){
+        display: none;
+    }
+    aside{
+        display: flex;
+        background-color: inherit !important;
+        width: 90vw !important;
+        height: 170px !important;
+        justify-content: space-between !important;
+        align-items: center; /* Centraliza o conteúdo verticalmente */
+        margin-bottom: 40px;
+        padding: 5px !important;
+    }
+    aside .logo{
+        max-width: 100%; /* Garante que a imagem não ultrapasse a largura do aside */
+        max-height: 100%; /* Garante que a imagem não ultrapasse a altura do aside */
+        object-fit: contain; /* Mantém a proporção da imagem e evita esticamento */
+    }
+}
+
+
+@media only screen and (max-width: 430px){
+    aside {
+        width: 100vw !important;
+    }
 }

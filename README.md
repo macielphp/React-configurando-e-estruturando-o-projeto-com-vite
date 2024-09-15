@@ -530,6 +530,11 @@ git commit -m "Complete Card component, html and css"
     
 git commit -m "Cards being dinamically rendered"
 
+## Responsiveness
+Style the each component with their own files of styles. Do not center the styles in the codeconnect/react/src/App.css nor codeconnect/react/src/index.css;
+
 ## Screenshots:
 ![alt text](/react/assets/image-11.png)
 ![alt text](/react/assets/image-10.png)
+![alt text](/react/assets/image-12.png)
+![alt text](/react/assets/image-13.png)

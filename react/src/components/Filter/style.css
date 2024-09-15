@@ -24,3 +24,9 @@
     color: var(--medium-gray);
     font-size: 18px;
 }
+
+@media only screen and (max-width: 430px){
+    .container-filter{
+        display: none;
+    }
+}
