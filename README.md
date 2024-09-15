@@ -534,6 +534,9 @@ git commit -m "Cards being dinamically rendered"
 ## Responsiveness
 Style the each component with their own files of styles. Do not center the styles in the codeconnect/react/src/App.css nor codeconnect/react/src/index.css;
 
+## Deploy with Vercel
+Do it: https://www.npmjs.com/package/vercel
+
 ## Screenshots:
 ![alt text](/react/assets/image-11.png)
 ![alt text](/react/assets/image-10.png)
