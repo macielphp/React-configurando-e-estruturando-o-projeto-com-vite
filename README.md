@@ -1,5 +1,6 @@
 # React-configurando-e-estruturando-o-projeto-com-vite
  Project derived from the course "React: configurando e estruturando o projeto com Vite" from Alura
+Acesse: https://codeconnect-feed-pied.vercel.app/
 
 ## First commands
 1. npm create vite@latest -- --template react
